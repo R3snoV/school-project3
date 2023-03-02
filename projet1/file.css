@@ -1,0 +1,807 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.4s ease-in-out;
+    letter-spacing: 1px;
+    
+}
+del{
+    text-decoration: line-through;
+}
+.menu{
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    #nav {
+      display: none;
+    }
+    #forms {
+        display: none;
+      }
+      .menu{
+        display: block;
+      }
+      .menu-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      
+      }
+    
+      .menu ul {
+        display: none;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(22, 122, 162);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        
+      }
+    
+      .menu ul.show {
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .menu li {
+        margin: 10px 0;
+      }
+    
+      .menu a {
+        padding: 10px;
+        border-radius: 5px;
+      }
+    
+}
+  
+   
+
+#wtssup {
+    position: absolute;
+    position: fixed;
+    z-index: 10;
+    right: 10px;
+    bottom: 100px;
+    border: none;
+    background-color: transparent;
+    z-index: 10;
+    cursor: pointer;
+    border-radius: 50%;
+    animation: fadein 1s;
+    
+    
+   
+}
+
+
+#wtssup:hover {
+    transform: scale(1.1);
+   z-index: 2;
+   box-shadow: 4px 6px 10px 0px rgb(138 122 122 / 50%);
+}
+
+#wtssup::before {
+content: "Need Help?";
+position: absolute;
+right: 39px;
+border-radius: 5px;
+bottom: 20px;
+width: 120px;
+font-weight: bold;
+font-size: 12px;
+  
+}
+#wtssup img{
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+
+}
+
+h6 {
+    font-size: 1.2em;
+}
+
+h5 {
+    font-size: 1.4em;
+}
+
+h4 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+section {
+    width: 100vw;
+    
+}
+
+#header1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(42, 170, 221);
+    align-items: center;
+    height: 7vh;
+    border-bottom: 1px solid rgb(102, 100, 100);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    animation: fade-down 0.8s;
+    margin-top: 25px;
+   
+}
+
+#header1 img {
+
+    width: 40px;
+    height: 40px;
+
+}
+
+#header1 a {
+    text-decoration: none;
+    color: white;
+}
+
+#header1 a:hover {
+    color: rgb(43, 43, 43);
+
+}
+
+#header1 button {
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    font-size: 15px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#header1 button:hover {
+    color: rgb(43, 43, 43);
+    
+}
+#forms {
+  
+   width: 100%;
+   background-color: rgb(44, 154, 198);
+   display: flex;
+   justify-content: flex-end;
+   height: 7vh;
+   animation: fade-down 1s;
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
+   z-index: 999;
+    
+}
+#forms button{
+   
+   color: white;
+   background-color: transparent;
+   border: none;
+   padding-left: 15px;
+   padding-right: 15px;
+   font-weight: 500;
+   cursor: pointer;
+    
+}
+#forms button:hover{
+  color: black;
+    
+}
+
+
+#section1 {
+
+
+    height: 90vh;
+    background-image: url(image/Sans\ titre\ \(1\).jpg );
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    animation: fadein 1s;
+    
+}
+@keyframes fadein{
+    from{
+       opacity: 0;
+    }
+    to{
+       opacity: 1;
+    }
+   }
+#section1 h5 {
+    font-size: 15px;
+    color: rgb(219, 35, 93);
+}
+
+#section1 h2 {
+    width: 15em;
+    padding-top: 20px;
+}
+
+#section1 div {
+    padding-top: 160px;
+    padding-left: 40px;
+}
+
+#section1 button {
+    padding: 13px 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(42, 170, 221);
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#section1 button:hover {
+
+    background-color: rgb(69, 192, 240);
+}
+
+#section1 img {
+    position: absolute;
+    right: 7em;
+    height: 31em;
+    top: 1.6em;
+}
+@media screen and (max-width: 420px) {
+    #section1 div {
+        padding-top: 300px;
+        padding-left: 6px;
+    }
+    #section1 h2 {
+        width: 15em;
+        padding-top: 20px;
+        font-size: 26px;
+    }
+}
+#section2 {
+    max-width: 1000px;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    animation: fadein 2s;
+}
+
+#section2 div{
+  display: flex;
+  align-items: center;
+  border-right: 1px solid black;
+
+}
+@media screen and (max-width: 876px) {
+    #section2 div{
+        border-right: none;
+      
+      }
+}
+#section2 img {
+    width: 70px;
+    height: auto;
+    display: inline-block;
+    padding-top: 1em;
+
+
+}
+
+#section2 h3 {
+    font-size: 20px;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 30px;
+}
+
+#section3 {
+    display: grid;
+    width: 90%;
+    gap: 80px;
+    padding-top: 80px;
+    margin: 100px auto;
+    grid-template-columns: repeat(auto-fill, 300px);
+    padding-left: 20px;
+    margin-top: -5px;
+    padding-bottom: 60px;
+    animation: fade-up 1s;
+}
+
+
+#section3 h2 {
+   
+    top: 180px;
+    font-size: 26px;
+    padding-left: 15px;
+}
+#section3 img {animation: fadein 1s;}
+
+#section3 img:hover {
+    position: relative;
+    animation: fadein 2s;
+    transform: scale(1.1);
+   
+    
+}
+.mp {
+    position: relative;
+}
+.somme{
+    position: absolute;
+    top: 90px;
+    animation: fadein 1s;
+}
+.somme h3{
+    font-size: 18px;
+    padding-left: 15px;
+    color: rgb(42, 42, 42);
+}
+@media screen and (max-width: 420px) {
+    #section3 {
+        
+        
+        gap: 70px;
+       
+       margin-left: -5px;
+        grid-template-columns: repeat(auto-fill, 300px);
+        
+        margin-top: -5px;
+        padding-bottom: 60px;
+        animation: fade-up 1s;
+    }
+     
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(1.1);
+    }
+   100%{
+    transform: scale(1.1);
+    }
+}
+
+#section4 {
+    position: relative;
+    padding-bottom: 50px;
+    animation: fade-up 1s;
+    
+}
+@keyframes fade-up{
+    0%{
+        opacity: 0;
+      transform:  translateY(30px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform:  translateY(0px) scale(1);
+    }
+}
+@keyframes fade-down{
+    0%{
+        opacity: 0;
+      transform:  translateY(-30px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform:  translateY(0px) scale(1);
+    }
+}
+.promotion{
+    position: relative;
+}
+.promo{
+    position: absolute;
+    top: 20px;
+    background-color: rgb(255, 62, 62);
+    border-radius: 15px;
+    padding: 2px 8px 2px 10px;
+    right: -15px;
+    color: white;
+    font-weight: bold;
+}
+
+#section4 h5 {
+    text-align: center;
+    color: black;
+}
+
+#section4 h2 {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(22, 122, 162);
+}
+
+#section4 .product {
+
+    max-width: 1200px;
+    margin: 10px auto;
+    margin-left: 80px;
+    display: grid;
+    width: 90%;
+    gap: 100px;
+    padding-top: 80px;
+    grid-template-columns: repeat(auto-fill, 200px);
+    
+    
+   
+  
+}
+
+#section4 .product img {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+}
+#section4 .product img:hover {
+   transform: scale(1.1);
+   z-index: 2;
+}
+
+#section4 .product p {
+    color: black;
+    padding-top: 15px;
+    font-weight: bold;
+}
+#section4 .product p:hover {
+    opacity: 0.7;
+    
+}
+
+#section4 .product button {
+    padding: 13px 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(42, 170, 221);
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#section4 .product button:hover {
+
+    background-color: rgb(99, 204, 246);
+}
+
+#section4 .product a {
+    text-decoration: none;
+}
+
+#button-middle {
+   text-align: center;
+    display: block;
+    margin: 90px auto;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(19, 172, 233);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#button-middle:hover {
+
+    background-color: rgb(34, 34, 34);
+    color: white;
+}
+
+#section5 {
+    position: relative;
+    padding-bottom: 10px;
+    padding-top: 100px;
+    background-color: rgb(245, 244, 244);
+    animation: fade-up 1s;
+    margin-bottom: -80px;
+}
+
+#section5 .div1 {
+    padding-left: 100px;
+    
+    display: block;
+}
+
+#section5 .div1 h2 {
+    font-size: 50px;
+    color: rgb(22, 122, 162);
+}
+
+#section5 .div2 {
+    position: absolute;
+    right: 200px;
+    top: 10px;
+}
+
+
+#section5 .div2 h1 {
+    font-size: 150px;
+    color: gray;
+   
+}
+
+#section5 .div3 p {
+    width: 290px;
+    padding-top: 200px;
+    font-size: 20px;
+    
+}
+
+.divs {
+
+
+    margin-top: 300px;
+    display: grid;
+    gap: 100px;
+    grid-template-columns: repeat(auto-fill, 300px);
+    margin: 200px auto;
+    max-width: 1160px;
+    
+}
+@media screen and (max-width: 1041px) {
+    #section5 .div2 {
+        position: absolute;
+       left: 40px;
+        top: 160px;
+     
+}
+#section5 .div1 {
+    padding-left: 40px;
+    padding-bottom: 70px;
+    display: block;
+}
+#section5 .div2 h1 {
+    font-size: 140px;
+    color: gray;
+   
+}
+}
+@media screen and (max-width: 555px) {
+    #section5 .div2 {
+        position: absolute;
+       left: 40px;
+        top: 250px;
+     
+}
+
+}
+@media screen and (max-width: 470px) {
+    #section5 .div2 {
+       display: none;
+     
+}
+#section5 .div1 {
+    
+    padding-bottom: 5px;
+  
+}
+.divs {
+
+
+    
+    display: grid;
+    gap: 100px;
+    grid-template-columns: repeat(auto-fill, 300px);
+    margin: 100px auto;
+    max-width: 1160px;
+    
+}
+}
+.divs p {
+    width: 230px;
+    font-size: 20px;
+}
+
+.all {
+    
+    padding-right: 300px;
+    padding-left: 60px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 4px 6px 10px 0px rgb(138 122 122 / 50%);
+}
+
+.all img {
+    border-radius: 10px 40px 10px 40px;
+    width: 110px;
+    height: auto;
+    margin-top: 30px;
+}
+    
+
+
+
+.mixh {
+    position: absolute;
+    right: 55px;
+    bottom: 70px;
+}
+
+.mixh h3 {
+    font-size: 24px;
+}
+
+.mixh h4 {
+    font-size: 20px;
+    color: rgb(75, 74, 74);
+}
+
+footer {
+
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    line-height: 50px;
+    position: relative;
+    padding-top: 50px;
+    margin-top: 90px;
+    padding-bottom: 80px;
+    box-shadow: 100px 100px 40px 100px rgb(138 122 122 / 50%);
+    
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    
+}
+
+footer ion-icon {
+    width: 50px;
+    height: 40px;
+
+}
+
+footer ion-icon:hover {
+    color: rgb(4, 106, 223);
+
+}
+
+footer h2 {
+    font-size: 27px;
+
+}
+
+footer h4 {
+    font-size: 18px;
+
+}
+
+footer a:hover {
+    opacity: 0.7;
+
+}
+
+footer button {
+    border: none;
+    display: flex;
+    align-items: center;
+
+}
+
+footer .text-center {
+    position: absolute;
+    bottom: 0;
+    color: gray;
+}
+
+
+#section1ct  {
+    padding-bottom: 200px;
+    position: relative;
+    
+}
+
+#section1ct h2 {
+    font-size: 30px;
+}
+#section1ct h3 {
+    font-size: 18px;
+    color: rgb(70, 70, 70);
+}
+#section1ct .div1ct {
+    padding-top: 100px;
+    padding-left: 80px;
+    line-height: 50px;
+}
+#section1ct .div2ct {
+  position: absolute;
+  top: 100px;
+  right: 110px;
+  line-height: 50px;
+}
+#section1ct input {
+    width: 600px;
+    height: 40px;
+    padding-left: 10px;
+    margin-top: 20px;
+  }
+  #section1ct textarea {
+   resize: none;
+   margin-top: 20px;
+   width: 600px;
+  }
+  #section1ct button {
+    color: rgb(4, 106, 223);
+    border: 1px solid rgb(4, 106, 223);
+    background-color: transparent;
+    padding: 10px 40px;
+    cursor: pointer;
+    font-weight: bold;
+   }
+   #section1ct button:hover {
+    border: none;
+    background-color:rgb(4, 106, 223) ;
+    color: white;
+    
+   }
+   @media screen and (max-width: 1300px) {
+    #section1ct .div2ct {
+        position: absolute;
+        top: 400px;
+       left: 30px;
+        line-height: 40px;
+        
+      }
+      #section1ct h2 {
+        font-size: 25px;
+        
+    }
+      #section1ct  {
+        padding-bottom: 450px;
+        position: relative;
+        
+    }
+    #section1ct .div1ct {
+        padding-top: 30px;
+        padding-left: 30px;
+        line-height: 40px;
+    }
+    #section1ct textarea {
+        resize: none;
+        margin-top: 20px;
+        width: 600px;
+        height: 80px;
+       }
+}
